@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesSE.css')}}">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+    <!-- lg = large breakpoint, navbar-light = make text dark, nb-background-color = custom css BG color--> 
+        <div class="container">
+            <a href="{{url_for('index')}}" class="navbar-brand">
+                <img src="{{url_for('static', filename='/images/algae2.png')}}" alt="Algae Logo" class="d-inline-block align-text-top w-25">
+            </a>
+
+            <!-- Hamburger icon from Bootstrap-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navbar menu with custom hover underline CSS and -->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!-- Links to hamburger menu button-->
+                <ul class="navbar-nav ms-auto">     <!-- ms-auto is margin spacing -->
+                    <li class="nav-item">
+                        <a href="{{url_for('authors')}}" class="nav-link hover-underline-animation nbMenuItem">Authors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('procedure')}}" class="nav-link hover-underline-animation nbMenuItem">Procedure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('results')}}" class="nav-link hover-underline-animation nbMenuItem">Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="showcase text-light p-2 text-center">  <!-- showcase is custom css -->
+        <!-- headerBG = custom css BG color, p-2 = padding 2px -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <!-- img-fluid = won't expand image larger than the container and will scale down -->
+                    <img class="img-fluid" src="{{url_for('static', filename='/images/Tanks2.png')}}" alt="Algae Experiment Tanks">
+                </div>
+                <div class="col-sm-6 p-0 d-flex align-items-center">
+                    <div class="container">
+                        <h1 class="display-4 showColor">Effect of Cereal Plant Staws' Breakdown on <em>Anabaena inaequalis</em></h1>
+                        <h2 class="showColor">O. Agrawal, Dr. D. Ellsworth</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Overview -->
+    <section class="overview text-dark p-2 text-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top -->
+                    <img class="img-fluid" src="{{url_for('static', filename='/images/eutrophication.jpeg')}}" alt="Eutrophication Process">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft ovTextColor">Background</h1>    <!-- Custom padding left side-->
+                    <p class="lead overview-font ovPadLeft ovTextColor">A process known as eutrophication has been slowly developing over the years, impacting our environment. What is eutrophication? 
+                                                                        It is the process by which algae builds up in bodies of water due to excess nutrients such as nitrogen and phosphorus. These sudden 
+                                                                        algae blooms in water can have detrimental effects, including greenhouse gas emissions. Due to a build-up of algae, rather than 
+                                                                        releasing oxygen, these cyanobacteria deprive the environment of oxygen and release carbon dioxide. This causes the suffocation of 
+                                                                        aquatic organisms and a destabilizing effect on the ecosystem. The main natural methods that have been studied to slow down 
+                                                                        the growth of algae was the use of cereal plant straws, or more specifically, barley straws. Barley straw works to slow down 
+                                                                        algae growth through a series of decomposition, resulting in hydrogen peroxide which in turn, stops continual algal growth.</p>
+                </div>
+            <div class="row">
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadRight ovTextColor">Rationale</h1>    <!-- Custom padding left side-->
+                    <p class="lead overview-font ovPadRight ovTextColor">Previous research has mainly focused on testing with barley straw, as we know. My research aimed to expand our knowledge of other 
+                                                                            cereal plant straws, including rye straw, wheat straw, and orchard grass hay. The study tested for oxygen levels, carbon dioxide 
+                                                                            levels, and absorption of light. Through these tests, the study will determine which cereal straw may have a greater impact on 
+                                                                            algae growth, positively or negatively. Using the data from the study, we can determine which cereal straws may come in more use 
+                                                                            to add to greater bodies of water in order to halt the process of eutrophication and stablize aquatic environments for animal and 
+                                                                            plant life alike.</p>
+                </div>
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top -->
+                    <img class="img-fluid" src="{{url_for('static', filename='/images/eutrophication2.png')}}" alt="Eutrophication">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 p-3">
+                    <!-- pt-3 = padding top -->
+                    <img class="img-fluid" src="{{url_for('static', filename='/images/anabaenainaequalis.jpeg')}}" alt="Anabaena inaequalis">
+                </div>
+                <div class="col-sm-8 p-3">
+                    <h1 class="ovPadLeft ovTextColor">Hypothesis & Prediction</h1>    <!-- Custom padding left side-->
+                    <p class="lead overview-font ovPadLeft ovTextColor">My hypothesis was that changing cereal straw types may affect the 
+                                                                        algae population growth rate as well as oxygen and carbon dioxide 
+                                                                        levels in closed environments. I predicted that the algae population 
+                                                                        growth rate and carbon dioxide levels would significantly decrease. 
+                                                                        In contrast, oxygen levels would significantly increase.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (requires Bootstrap icons CSS)-->
+    <footer class="p-5 footer text-light text-center position-relative">
+        <div class="container">
+            <p class="lead footColor">Copyright &copy; SE 2023 Research Project</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
