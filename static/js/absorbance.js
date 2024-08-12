@@ -18,6 +18,7 @@ async function getData(){
     const yAlgae = [];   
     const yNoAlgae = [];   
 
+    // hi
     // \n = new line
     // split('\n') will separate table into an array of individual rows
     // slice(start, end) will return a new array starting at index start up to but not including index end
