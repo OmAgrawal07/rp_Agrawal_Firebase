@@ -2,6 +2,8 @@
     This will be changed to a bar graph, not line
 */
 
+// TODO
+
 async function getData(){
     const response = await fetch("static/data/individual-absorbance.csv")
     const data = await response.text()  // CSV is in text format
