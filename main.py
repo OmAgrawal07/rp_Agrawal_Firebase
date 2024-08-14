@@ -22,6 +22,8 @@ def results():
 
 @app.route("/test", methods=['GET', 'POST'])
 
+# TODO
+
 def test():
     
     global config, userID, db, timestamp, key
@@ -53,10 +55,6 @@ def test():
     else:
         
         return "Success"
-
-# TODO
-
-# hi
 # TODO
 
 if __name__ == "__main__":
