@@ -22,7 +22,7 @@ def results():
 
 @app.route("/test", methods=['GET', 'POST'])
 
-# TODO
+# FIXED_TODO
 
 def test():
     
@@ -55,7 +55,7 @@ def test():
     else:
         
         return "Success"
-# TODO
+# FIXED_TODO
 
 if __name__ == "__main__":
     app.run(debug=False, host='0.0.0.0', port=5001)
